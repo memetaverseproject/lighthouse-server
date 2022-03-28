@@ -1,10 +1,4 @@
-import {
-  authHeaders,
-  DAOContractClient,
-  DECENTRALAND_ADDRESS,
-  initializeMetricsServer
-} from '@dcl/catalyst-node-commons'
-import { DAOContract } from '@dcl/catalyst-contracts'
+import { authHeaders, DECENTRALAND_ADDRESS, initializeMetricsServer } from '@dcl/catalyst-node-commons'
 import { COMMS_API } from '@dcl/catalyst-api-specs'
 import cors from 'cors'
 import express from 'express'
@@ -15,7 +9,6 @@ import { ConfigService } from './config/configService'
 import { lighthouseConfigStorage } from './config/simpleStorage'
 import { metricsComponent } from './metrics'
 import { patchLog } from './misc/logging'
-import { pickName } from './misc/naming'
 import { IRealm } from './peerjs-server'
 import { ArchipelagoService } from './peers/archipelagoService'
 import { IdService } from './peers/idService'
