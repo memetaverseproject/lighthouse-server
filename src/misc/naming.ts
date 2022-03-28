@@ -20,7 +20,7 @@ export const defaultNames = [
   'baldr'
 ]
 
-export async function pickName(configuredNames: string | undefined, daoClient: DAOClient) {
+export async function pickName(configuredNames: string) {
   const existingNames: string[] = await getLighthousesNames(daoClient)
 
   if (typeof configuredNames === 'undefined') {

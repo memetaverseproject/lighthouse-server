@@ -32,9 +32,9 @@ const DEFAULT_ETH_NETWORK = 'ropsten'
 const CURRENT_ETH_NETWORK = process.env.ETH_NETWORK ?? DEFAULT_ETH_NETWORK
 
 async function main() {
-  const daoClient = new DAOContractClient(DAOContract.withNetwork(CURRENT_ETH_NETWORK))
+  // const daoClient = new DAOContractClient(DAOContract.withNetwork(CURRENT_ETH_NETWORK))
 
-  const name = await pickName(process.env.LIGHTHOUSE_NAMES, daoClient)
+  const name = process.env.LIGHTHOUSE_NAME as string
   console.info('Picked name: ' + name)
 
   patchLog(name)
